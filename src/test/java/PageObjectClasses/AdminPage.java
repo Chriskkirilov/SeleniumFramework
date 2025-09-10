@@ -138,7 +138,7 @@ public class AdminPage extends AbstractBaseClass {
 	}
 	
 	
-	public void clickEditOnRow(String username) {
+	public void clickEditOnRow(String username) throws InterruptedException {
 		System.out.println(getRowCells(driver, username).size());
 		getRowCells(driver, username).getLast().findElements(By.tagName("button")).getLast().click();
 	}
@@ -156,7 +156,7 @@ public class AdminPage extends AbstractBaseClass {
 	}
 
 	public void assertUserRow(WebDriver driver, String expectedUsername, String expectedUserRole,
-			String expectedEmployeeName, String expectedStatus) {
+			String expectedEmployeeName, String expectedStatus) throws InterruptedException {
 
 		List<WebElement> cells = getRowCells(driver, expectedUsername);
 		if (expectedUsername != null)
