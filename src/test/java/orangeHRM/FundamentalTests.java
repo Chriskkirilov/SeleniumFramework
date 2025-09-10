@@ -25,10 +25,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FundamentalTests {
-    private WebDriver driver = new ChromeDriver();
+    private WebDriver driver;
 
 	@BeforeTest
 	public void setUp() throws InterruptedException {
+        driver = DriverFactory.create();                    // start here
+
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
 		Thread.sleep(4000);
@@ -43,7 +45,7 @@ public class FundamentalTests {
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
         if (driver != null) {
-            driver.quit();
+            driver.quit();                                   // always quit
         }
     }
 	
