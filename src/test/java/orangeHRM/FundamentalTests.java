@@ -1,5 +1,6 @@
 package orangeHRM;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -10,6 +11,7 @@ import PageObjectClasses.DashboardPage.SideMenuOptions;
 import PageObjectClasses.LoginPage;
 import PageObjectClasses.PIMAddEmployeePage;
 import PageObjectClasses.PIMEmployeeListPage;
+import Utilities.DriverFactory;
 import PageObjectClasses.PIMAddEmployeePage.UserStatus;
 
 import java.time.Duration;
@@ -23,10 +25,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FundamentalTests {
-	WebDriver driver = new ChromeDriver();
+    private WebDriver driver;
 
 	@BeforeTest
 	public void setUp() throws InterruptedException {
+        driver = DriverFactory.create();                    // start here
+
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
 		Thread.sleep(4000);
@@ -36,6 +40,14 @@ public class FundamentalTests {
 
 		loginPage.submitLogin();
 	}
+	
+
+    @AfterMethod(alwaysRun = true)
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 	
 	@Test
 	public void loginAddUserAndEmployee() throws InterruptedException {

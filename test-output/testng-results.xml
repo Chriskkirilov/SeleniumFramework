@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-10T13:36:22 EEST" name="Default suite" finished-at="2025-09-10T13:36:45 EEST" duration-ms="23436">
+  <suite started-at="2025-09-10T14:41:43 EEST" name="Default suite" finished-at="2025-09-10T14:42:07 EEST" duration-ms="23204">
     <groups>
     </groups>
-    <test started-at="2025-09-10T13:36:22 EEST" name="Default test" finished-at="2025-09-10T13:36:45 EEST" duration-ms="23436">
+    <test started-at="2025-09-10T14:41:43 EEST" name="Default test" finished-at="2025-09-10T14:42:07 EEST" duration-ms="23204">
       <class name="orangeHRM.FundamentalTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:orangeHRM.FundamentalTests@4fce136b]" started-at="2025-09-10T13:36:22 EEST" name="setUp" finished-at="2025-09-10T13:36:29 EEST" duration-ms="6736" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:orangeHRM.FundamentalTests@4aa83f4f]" started-at="2025-09-10T14:41:43 EEST" name="setUp" finished-at="2025-09-10T14:41:50 EEST" duration-ms="6967" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginAddUserAndEmployee()[pri:0, instance:orangeHRM.FundamentalTests@4fce136b]" started-at="2025-09-10T13:36:29 EEST" name="loginAddUserAndEmployee" finished-at="2025-09-10T13:36:45 EEST" duration-ms="16684" status="PASS">
+        <test-method signature="loginAddUserAndEmployee()[pri:0, instance:orangeHRM.FundamentalTests@4aa83f4f]" started-at="2025-09-10T14:41:50 EEST" name="loginAddUserAndEmployee" finished-at="2025-09-10T14:42:07 EEST" duration-ms="16218" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAddUserAndEmployee -->
