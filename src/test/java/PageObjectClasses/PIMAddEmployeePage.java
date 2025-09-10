@@ -21,6 +21,7 @@ public class PIMAddEmployeePage extends AbstractBaseClass {
 		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+		waitForElementToBecomeVisible(By.cssSelector(".oxd-text.oxd-text--h6.orangehrm-main-title"));
 	}
 	
     @FindBy(css = "input[placeholder='First Name']")
@@ -45,44 +46,42 @@ public class PIMAddEmployeePage extends AbstractBaseClass {
 	WebElement submitAddUserButton;
 	
 	public void fillAddEmployeeForm(String firstName, String middleName, String lastName, String employeeId) {
-		waitForElementToBecomeVisible(By.className("orangehrm-card-container"));
-		
-		firstNameField.click();
-		firstNameField.sendKeys(firstName);
-		
-		middleNameField.click();
-		middleNameField.sendKeys(middleName);
+	    waitForElementToBecomeVisible(By.className("orangehrm-card-container"));
 
-		lastNameField.click();
-		lastNameField.sendKeys(lastName);
+	    waits.clickable(firstNameField).click();
+	    firstNameField.sendKeys(firstName);
 
-		WebElement employeeIdField = inputFieldsList.get(4);
-		employeeIdField.sendKeys(Keys.chord(Keys.COMMAND,"a", Keys.DELETE));
-		employeeIdField.sendKeys(employeeId);
+	    waits.clickable(middleNameField).click();
+	    middleNameField.sendKeys(middleName);
+
+	    waits.clickable(lastNameField).click();
+	    lastNameField.clear();
+	    lastNameField.sendKeys(lastName);
+
+	    WebElement employeeIdField = inputFieldsList.get(4); // keep for now; we’ll refactor locators later
+	    employeeIdField.sendKeys(Keys.chord(Keys.COMMAND, "a", Keys.DELETE));
+	    employeeIdField.sendKeys(employeeId);
 	}
-	
-	public void createLoginDetails(String username, String password, UserStatus status) throws InterruptedException {
-		AddCreateLoginDetails();
-		
-		WebElement usernameField = inputFieldsList.get(5);
-		WebElement passwordField = inputFieldsList.get(6);
-		WebElement confirmPasswordField = inputFieldsList.get(7);
-		
-		usernameField.sendKeys(username);
-		
-		passwordField.sendKeys(password);
-		
-		confirmPasswordField.sendKeys(password);
 
-		switch(status) {
-		case Enabled:
-			radioOptions.get(0).click();
-			break;
-		case Disabled:
-			radioOptions.get(0).click();
-			break;
-		}
+	public void createLoginDetails(String username, String password, UserStatus status) {
+	    AddCreateLoginDetails();
+
+	    WebElement usernameField = inputFieldsList.get(5);
+	    WebElement passwordField = inputFieldsList.get(6);
+	    WebElement confirmPasswordField = inputFieldsList.get(7);
+
+	    usernameField.sendKeys(username);
+	    passwordField.sendKeys(password);
+	    confirmPasswordField.sendKeys(password);
+
+	    switch (status) {
+	        case Enabled: 
+	        	radioOptions.get(0).click();
+	        case Disabled: 
+	        	radioOptions.get(1).click();
+	    }
 	}
+
 	
 	public void submitAddUser() {
 		submitAddUserButton.click();

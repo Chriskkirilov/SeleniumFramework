@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testBooking.sampleTestBooking">
+      <class name="orangeHRM.FundamentalTests">
         <methods>
-          <include name="test1"/>
+          <include name="loginAddUserAndEmployee"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- testBooking.sampleTestBooking -->
+      </class> <!-- orangeHRM.FundamentalTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
