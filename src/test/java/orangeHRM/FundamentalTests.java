@@ -25,12 +25,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FundamentalTests {
-    private WebDriver driver;
+    private WebDriver driver = new ChromeDriver();
 
 	@BeforeTest
 	public void setUp() throws InterruptedException {
-        driver = DriverFactory.create();                    // start here
-
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
 		Thread.sleep(4000);
@@ -67,7 +65,7 @@ public class FundamentalTests {
 	    pimAddEmployeePage.createLoginDetails(uniqueUsername, "williams39943", UserStatus.Disabled);
 	    pimAddEmployeePage.submitAddUser();
 
-	    //pimAddEmployeePage.waitForSuccessToast();
+	    pimAddEmployeePage.waitForSuccessToast();
 
 	    By adminSideButtonBy = By.xpath("(//ul[@class='oxd-main-menu'])//li[1]");
 	    new Utilities.Waits(driver).clickable(adminSideButtonBy);

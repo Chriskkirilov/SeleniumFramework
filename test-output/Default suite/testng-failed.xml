@@ -6,6 +6,7 @@
       <class name="orangeHRM.FundamentalTests">
         <methods>
           <include name="loginAddUserAndEmployee"/>
+          <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- orangeHRM.FundamentalTests -->

@@ -126,7 +126,8 @@ public class AdminPage extends AbstractBaseClass {
         waits.clickable(submitLoginButton).click();
 	}
 
-	private static List<WebElement> getRowCells(WebDriver driver, String usernameKeyInRow) {
+	private static List<WebElement> getRowCells(WebDriver driver, String usernameKeyInRow) throws InterruptedException {
+		Thread.sleep(3000);
 		String rowXpath = "//div[text() = '" + usernameKeyInRow + "']"
 				+ "//parent::div//parent::div//parent::div//div[@class='oxd-table-cell oxd-padding-cell']";
 
