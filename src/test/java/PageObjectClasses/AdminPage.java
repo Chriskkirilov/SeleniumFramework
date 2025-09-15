@@ -137,9 +137,7 @@ public class AdminPage extends AbstractBaseClass {
 		return driver.findElements(By.xpath(rowXpath));
 	}
 	
-	
 	public void clickEditOnRow(String username) throws InterruptedException {
-		System.out.println(getRowCells(driver, username).size());
 		getRowCells(driver, username).getLast().findElements(By.tagName("button")).getLast().click();
 	}
 	public void editUserRow(String userRole, String status, String username, String newPassword) throws InterruptedException {

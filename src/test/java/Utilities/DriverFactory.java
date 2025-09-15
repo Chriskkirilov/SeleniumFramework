@@ -6,10 +6,13 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public final class DriverFactory {
     private DriverFactory() {}
+
     public static WebDriver create() {
         ChromeOptions opts = new ChromeOptions();
-        opts.addArguments("--headless=new", "--window-size=1440,900",
-                          "--no-sandbox", "--disable-dev-shm-usage");
+        opts.addArguments("--headless=new");
+        opts.addArguments("--no-sandbox");
+        opts.addArguments("--disable-dev-shm-usage");
+        opts.addArguments("--window-size=1440,900");
         return new ChromeDriver(opts);
     }
 }

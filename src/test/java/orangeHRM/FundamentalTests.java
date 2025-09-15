@@ -1,7 +1,7 @@
 package orangeHRM;
 
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import PageObjectClasses.AdminPage;
@@ -14,40 +14,31 @@ import PageObjectClasses.PIMEmployeeListPage;
 import Utilities.DriverFactory;
 import PageObjectClasses.PIMAddEmployeePage.UserStatus;
 
-import java.time.Duration;
-import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FundamentalTests {
-    private WebDriver driver;
+	WebDriver driver;
 
-	@BeforeTest
+	@BeforeMethod
 	public void setUp() throws InterruptedException {
-        driver = DriverFactory.create();                    // start here
+		driver = DriverFactory.create();
+	    driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
-		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-
-		Thread.sleep(4000);
-		LoginPage loginPage = new LoginPage(driver);
-		String[] loginCredentials = loginPage.extractLoginCredentialsFromString();
-		loginPage.fillLoginForm(loginCredentials[0], loginCredentials[1]);
-
-		loginPage.submitLogin();
+	    Thread.sleep(4000);
+	    LoginPage loginPage = new LoginPage(driver);
+	    String[] loginCredentials = loginPage.extractLoginCredentialsFromString();
+	    loginPage.fillLoginForm(loginCredentials[0], loginCredentials[1]);
+	    loginPage.submitLogin();
 	}
-	
 
-    @AfterMethod(alwaysRun = true)
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();                                   // always quit
-        }
-    }
+	@AfterMethod(alwaysRun = true)
+	public void tearDown() {
+	    if (driver != null) {
+	        driver.quit();
+	    }
+	}
 	
 	@Test
 	public void loginAddUserAndEmployee() throws InterruptedException {
@@ -63,11 +54,11 @@ public class FundamentalTests {
 	    pimPage.clickAddButton();
 
 	    PIMAddEmployeePage pimAddEmployeePage = new PIMAddEmployeePage(driver);
-	    pimAddEmployeePage.fillAddEmployeeForm(uniqueFirstName, "peter", "john", userID);
+	    pimAddEmployeePage.fillAddEmployeeForm(uniqueFirstName, "adam", "john", userID);
 	    pimAddEmployeePage.createLoginDetails(uniqueUsername, "williams39943", UserStatus.Disabled);
 	    pimAddEmployeePage.submitAddUser();
 
-	    //pimAddEmployeePage.waitForSuccessToast();
+	    pimAddEmployeePage.waitForSuccessToast();
 
 	    By adminSideButtonBy = By.xpath("(//ul[@class='oxd-main-menu'])//li[1]");
 	    new Utilities.Waits(driver).clickable(adminSideButtonBy);
@@ -79,7 +70,7 @@ public class FundamentalTests {
 	    adminPage.selectUserRoleOption("ESS");
 	    adminPage.selectStatusOption("Disabled");
 
-	    adminPage.typeAndSelectEmployeeName(uniqueFirstName + " peter john");
+	    adminPage.typeAndSelectEmployeeName(uniqueFirstName + " adam john");
 	    adminPage.enterUserCredentials(uniqueUsername, "williams39943");
 	    adminPage.submitUserAdd();
 
