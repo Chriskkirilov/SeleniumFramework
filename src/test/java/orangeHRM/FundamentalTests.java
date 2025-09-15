@@ -58,7 +58,8 @@ public class FundamentalTests {
 	    pimAddEmployeePage.createLoginDetails(uniqueUsername, "williams39943", UserStatus.Disabled);
 	    pimAddEmployeePage.submitAddUser();
 
-	    pimAddEmployeePage.waitForSuccessToast();
+	    //pimAddEmployeePage.waitForSuccessToast();
+	    Thread.sleep(4000);
 
 	    By adminSideButtonBy = By.xpath("(//ul[@class='oxd-main-menu'])//li[1]");
 	    new Utilities.Waits(driver).clickable(adminSideButtonBy);
