@@ -43,7 +43,7 @@ public class FundamentalTests {
 	@Test
 	public void loginAddUserAndEmployee() throws InterruptedException {
 	    String uniqueFirstName = "name_" + shortUuid();
-	    String uniqueUsername = "A_" + shortUuid();
+	    String uniqueUsername = "AA_" + shortUuid();
 	    String userID = "id_" + shortUuid();
 
 	    DashboardPage dashboardPage = new DashboardPage(driver);
