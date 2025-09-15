@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-15T15:43:19 EEST" name="Default suite" finished-at="2025-09-15T15:43:49 EEST" duration-ms="29968">
+  <suite started-at="2025-09-15T16:18:08 EEST" name="Default suite" finished-at="2025-09-15T16:18:36 EEST" duration-ms="28041">
     <groups>
     </groups>
-    <test started-at="2025-09-15T15:43:19 EEST" name="Default test" finished-at="2025-09-15T15:43:49 EEST" duration-ms="29968">
+    <test started-at="2025-09-15T16:18:08 EEST" name="Default test" finished-at="2025-09-15T16:18:36 EEST" duration-ms="28041">
       <class name="orangeHRM.FundamentalTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:orangeHRM.FundamentalTests@158d2680]" started-at="2025-09-15T15:43:19 EEST" name="setUp" finished-at="2025-09-15T15:43:26 EEST" duration-ms="6977" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:orangeHRM.FundamentalTests@3016fd5e]" started-at="2025-09-15T16:18:08 EEST" name="setUp" finished-at="2025-09-15T16:18:15 EEST" duration-ms="6807" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginAddUserAndEmployee()[pri:0, instance:orangeHRM.FundamentalTests@158d2680]" started-at="2025-09-15T15:43:26 EEST" name="loginAddUserAndEmployee" finished-at="2025-09-15T15:43:48 EEST" duration-ms="22855" status="PASS">
+        <test-method signature="loginAddUserAndEmployee()[pri:0, instance:orangeHRM.FundamentalTests@3016fd5e]" started-at="2025-09-15T16:18:15 EEST" name="loginAddUserAndEmployee" finished-at="2025-09-15T16:18:36 EEST" duration-ms="21113" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAddUserAndEmployee -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:orangeHRM.FundamentalTests@158d2680]" started-at="2025-09-15T15:43:49 EEST" name="tearDown" finished-at="2025-09-15T15:43:49 EEST" duration-ms="119" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:orangeHRM.FundamentalTests@3016fd5e]" started-at="2025-09-15T16:18:36 EEST" name="tearDown" finished-at="2025-09-15T16:18:36 EEST" duration-ms="102" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

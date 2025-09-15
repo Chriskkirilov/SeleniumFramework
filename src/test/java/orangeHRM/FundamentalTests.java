@@ -17,6 +17,7 @@ import PageObjectClasses.PIMAddEmployeePage.UserStatus;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class FundamentalTests {
 	WebDriver driver;
@@ -44,6 +45,8 @@ public class FundamentalTests {
 	public void loginAddUserAndEmployee() throws InterruptedException {
 	    String uniqueFirstName = "name_" + shortUuid();
 	    String uniqueUsername = "AA_" + shortUuid();
+	    String uniqueSecondUsername = "A_" + shortUuid();
+
 	    String userID = "id_" + shortUuid();
 
 	    DashboardPage dashboardPage = new DashboardPage(driver);
@@ -72,9 +75,10 @@ public class FundamentalTests {
 	    adminPage.selectStatusOption("Disabled");
 
 	    adminPage.typeAndSelectEmployeeName(uniqueFirstName + " adam john");
-	    adminPage.enterUserCredentials(uniqueUsername, "williams39943");
+	    adminPage.enterUserCredentials(uniqueSecondUsername, "williams39943");
 	    adminPage.submitUserAdd();
-
+	    
+	    dashboardPage.waitForScreenToLoad();
 	    dashboardPage.clickOnSideOption(SideMenuOptions.Admin);
 
 	    adminPage.assertUserRow(driver, uniqueUsername, "ESS", uniqueFirstName + " john", "Disabled");
