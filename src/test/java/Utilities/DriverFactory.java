@@ -12,7 +12,7 @@ public final class DriverFactory {
         opts.addArguments("--headless=new");
         opts.addArguments("--no-sandbox");
         opts.addArguments("--disable-dev-shm-usage");
-        opts.addArguments("--window-size=1440,900");
+        opts.addArguments("start-maximized");
         return new ChromeDriver(opts);
     }
 }
