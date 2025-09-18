@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-18T14:34:39 EEST" name="Default suite" finished-at="2025-09-18T14:34:55 EEST" duration-ms="16167">
+  <suite started-at="2025-09-18T15:19:12 EEST" name="Default suite" finished-at="2025-09-18T15:19:30 EEST" duration-ms="17547">
     <groups>
     </groups>
-    <test started-at="2025-09-18T14:34:39 EEST" name="Default test" finished-at="2025-09-18T14:34:55 EEST" duration-ms="16167">
+    <test started-at="2025-09-18T15:19:12 EEST" name="Default test" finished-at="2025-09-18T15:19:30 EEST" duration-ms="17547">
       <class name="orangeHRM.FundamentalTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:orangeHRM.FundamentalTests@2f9f7dcf]" started-at="2025-09-18T14:34:39 EEST" name="setUp" finished-at="2025-09-18T14:34:47 EEST" duration-ms="7927" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:orangeHRM.FundamentalTests@72967906]" started-at="2025-09-18T15:19:12 EEST" name="setUp" finished-at="2025-09-18T15:19:20 EEST" duration-ms="7729" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginAddUserAndEmployee()[pri:0, instance:orangeHRM.FundamentalTests@2f9f7dcf]" started-at="2025-09-18T14:34:47 EEST" name="loginAddUserAndEmployee" finished-at="2025-09-18T14:34:55 EEST" duration-ms="8113" status="FAIL">
+        <test-method signature="loginAddUserAndEmployee()[pri:0, instance:orangeHRM.FundamentalTests@72967906]" started-at="2025-09-18T15:19:20 EEST" name="loginAddUserAndEmployee" finished-at="2025-09-18T15:19:30 EEST" duration-ms="9708" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='orangehrm-header-container']//button"}
@@ -20,9 +20,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.35.0', revision: '1c58e5028b'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.6.1', java.version: '21.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [af6851787277ef6068a871a256255a27, findElement {value=//div[@class='orangehrm-header-container']//button, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.185, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: /var/folders/ft/x4sssql52lb...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51618}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51618/devtoo..., se:cdpVersion: 140.0.7339.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: af6851787277ef6068a871a256255a27]]>
+Command: [681344803a4f398e54d83cf50e638de8, findElement {value=//div[@class='orangehrm-header-container']//button, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.185, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: /var/folders/ft/x4sssql52lb...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52231}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52231/devtoo..., se:cdpVersion: 140.0.7339.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 681344803a4f398e54d83cf50e638de8]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='orangehrm-header-container']//button"}
@@ -31,9 +31,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.35.0', revision: '1c58e5028b'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.6.1', java.version: '21.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [af6851787277ef6068a871a256255a27, findElement {value=//div[@class='orangehrm-header-container']//button, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.185, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: /var/folders/ft/x4sssql52lb...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51618}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51618/devtoo..., se:cdpVersion: 140.0.7339.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: af6851787277ef6068a871a256255a27
+Command: [681344803a4f398e54d83cf50e638de8, findElement {value=//div[@class='orangehrm-header-container']//button, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.185, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: /var/folders/ft/x4sssql52lb...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52231}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52231/devtoo..., se:cdpVersion: 140.0.7339.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 681344803a4f398e54d83cf50e638de8
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -85,7 +85,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAddUserAndEmployee -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:orangeHRM.FundamentalTests@2f9f7dcf]" started-at="2025-09-18T14:34:55 EEST" name="tearDown" finished-at="2025-09-18T14:34:55 EEST" duration-ms="104" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:orangeHRM.FundamentalTests@72967906]" started-at="2025-09-18T15:19:30 EEST" name="tearDown" finished-at="2025-09-18T15:19:30 EEST" duration-ms="91" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

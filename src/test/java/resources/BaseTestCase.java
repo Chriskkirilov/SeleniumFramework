@@ -23,7 +23,7 @@ public class BaseTestCase {
 		String browserName = prop.getProperty("browser");
 		if (browserName.equalsIgnoreCase("chrome")) {
 		ChromeOptions opts = new ChromeOptions();
-		//opts.addArguments("--headless=new");
+		opts.addArguments("--headless=new");
 		opts.addArguments("--no-sandbox");
 		opts.addArguments("--disable-dev-shm-usage");
 		opts.addArguments("start-maximized");
