@@ -58,7 +58,7 @@ public class AdminPage extends AbstractBaseClass {
 
 
 	 public void clickAddButton() {
-	        waits.clickable(addButton).click();
+		 addButton.click();
 	}
 
 	public void waitForAdminFormToAppear() {

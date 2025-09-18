@@ -11,20 +11,21 @@ import PageObjectClasses.DashboardPage.SideMenuOptions;
 import PageObjectClasses.LoginPage;
 import PageObjectClasses.PIMAddEmployeePage;
 import PageObjectClasses.PIMEmployeeListPage;
-import Utilities.DriverFactory;
+import resources.BaseTestCase;
 import PageObjectClasses.PIMAddEmployeePage.UserStatus;
 
+import java.io.IOException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class FundamentalTests {
-	WebDriver driver;
-
+public class FundamentalTests extends BaseTestCase {
 	@BeforeMethod
-	public void setUp() throws InterruptedException {
-		driver = DriverFactory.create();
+	public void setUp() throws InterruptedException, IOException {
+	    InitializeDriver();   // <-- create the driver before using it
 	    driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
 	    Thread.sleep(4000);
@@ -58,7 +59,7 @@ public class FundamentalTests {
 
 	    PIMAddEmployeePage pimAddEmployeePage = new PIMAddEmployeePage(driver);
 	    pimAddEmployeePage.fillAddEmployeeForm(uniqueFirstName, "adam", "john", userID);
-	    pimAddEmployeePage.createLoginDetails(uniqueUsername, "williams39943", UserStatus.Disabled);
+	    pimAddEmployeePage.createLoginDetails(uniqueUsername, "williams39943", UserStatus.Enabled);
 	    pimAddEmployeePage.submitAddUser();
 
 	    //pimAddEmployeePage.waitForSuccessToast();
@@ -72,7 +73,7 @@ public class FundamentalTests {
 	    adminPage.clickAddButton();
 	    dashboardPage.waitForScreenToLoad();
 	    adminPage.selectUserRoleOption("ESS");
-	    adminPage.selectStatusOption("Disabled");
+	    adminPage.selectStatusOption("Enabled");
 
 	    adminPage.typeAndSelectEmployeeName(uniqueFirstName + " adam john");
 	    adminPage.enterUserCredentials(uniqueSecondUsername, "williams39943");
@@ -81,7 +82,7 @@ public class FundamentalTests {
 	    dashboardPage.waitForScreenToLoad();
 	    dashboardPage.clickOnSideOption(SideMenuOptions.Admin);
 
-	    adminPage.assertUserRow(driver, uniqueUsername, "ESS", uniqueFirstName + " john", "Disabled");
+	    adminPage.assertUserRow(driver, uniqueUsername, "ESS", uniqueFirstName + " john", "Enabled");
 	    
 	    adminPage.clickEditOnRow(uniqueUsername);
 	}
