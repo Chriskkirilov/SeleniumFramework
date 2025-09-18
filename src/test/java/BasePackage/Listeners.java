@@ -35,14 +35,14 @@ public class Listeners extends BaseTestCase implements ITestListener {
 		// TODO Auto-generated method stub
 		ITestListener.super.onTestFailure(result);
 		test.log(Status.FAIL, "Failed.");
-		String filepath = null;
-		try {
-			filepath = getScreenshot(result.getMethod().getMethodName(), driver);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		test.addScreenCaptureFromPath(filepath, result.getMethod().getMethodName());
+//		String filepath = null;
+//		try {
+//			filepath = getScreenshot(result.getMethod().getMethodName(), driver);
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		test.addScreenCaptureFromPath(filepath, result.getMethod().getMethodName());
 		
 	}
 
